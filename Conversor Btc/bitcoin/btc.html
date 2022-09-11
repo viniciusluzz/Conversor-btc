@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style_btc.css">
+    <title>Js avançado</title>
+</head>
+
+<body>
+
+    <div id="principal">
+
+        <div id="up">
+            <div id="menu_btt">
+                <label for="check">
+                    <ion-icon name="menu-outline" class="menu_btn"></ion-icon>
+                </label>
+            </div>
+
+            <a href="/indicadores/indicadores.html" id="logo">
+                <img class="btc" src="./logo.png">
+                <h1 class="h1">Bitcoin trading</h1>
+            </a>
+
+            <div></div>
+        </div>
+
+        <div id="main">
+
+            <input type="checkbox" id="check">
+
+            <div id="menu">
+
+                <a href="/indicadores/indicadores.html" class="btt_menu">
+                    <ion-icon name="bar-chart" class="menu_btt_2"></ion-icon>
+                    <p>Mercado</p>
+                    <div></div>
+                </a>
+
+                <a href="" class="btt_menu">
+                    <ion-icon name="logo-bitcoin" class="menu_btt_2"></ion-icon>
+                    <p>Bitcoin para Reais</p>
+                    <div></div>
+                </a>
+
+                <a href="/satoshi/index.html" class="btt_menu">
+                    <ion-icon name="pizza" class="menu_btt_2"></ion-icon>
+                    <p>Satoshis para Reais</p>
+                    <div></div>
+                </a>
+
+                <a href="/ajuda/sobre.html" class="btt_menu">
+                    <ion-icon name="help-circle" class="menu_btt_2"></ion-icon>
+                    <p>Sobre o Bitcoin</p>
+                    <div></div>
+                </a>
+
+            </div>
+
+            <div id="conversor">
+
+                <div id="text">
+                    <h1 id="price">Price</h1>
+                </div>
+
+                <div id="inputs">
+
+                    <input type="checkbox" id="check_two">
+
+
+                    <input class="input_value" id="valor2" type="text" placeholder="BTC">
+
+                    <label for="check_two" id="valor3">
+                        <ion-icon name="repeat-outline" class="alternar"></ion-icon>
+                    </label>
+
+                    <input class="input_value" id="valor" type="text" placeholder="BRL">
+
+                </div>
+
+            </div>
+
+            <div></div>
+
+        </div>
+
+    </div>
+
+    <script src="./btc.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

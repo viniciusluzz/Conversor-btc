@@ -1,0 +1,1581 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+/* 'Bangers', cursive */
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+/* 'Silkscreen', cursive; */
+
+html {
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+#principal {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#up {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #f89e19;
+    height: 10%;
+}
+
+#menu_btt {
+    margin-left: 1.2%;
+}
+
+.menu_btn {
+    cursor: pointer;
+    font-size: 5rem;
+    color: white;
+    transition: 0.2s ease;
+    transition-property: font-size;
+}
+
+.menu_btn:hover {
+    font-size: 6rem;
+}
+
+.menu_btn:active {
+    color: #dc701a;
+}
+
+#up h1 {
+    margin: 0;
+    font-family: 'Silkscreen', cursive;
+    font-size: 5rem;
+    color: white;
+}
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btc {
+    margin: 0;
+    width: 8rem;
+    height: 8rem;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    grid-row-gap: 10rem;
+    background-color: #191919;
+    height: 90%;
+}
+
+#conversor {
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-start;
+
+    color: white;
+    font-family: 'Silkscreen', cursive;
+}
+
+.text img {
+    margin: 0;
+    padding: 0;
+    width: 8rem;
+}
+
+.text p {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 2rem;
+
+    margin: 0;
+    padding: 0;
+    font-size: 4rem;
+    color: #f89e19;
+}
+
+.text h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 15rem;
+}
+
+#check:checked~#conversor h1{
+    font-size: 9rem;
+}
+
+#check:checked~#conversor p{
+    font-size: 2rem;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #f89e19;
+    width: 5%;
+    height: 100%;
+}
+
+@keyframes menu {
+    from {
+        width: 5%;
+    }
+
+    to {
+        width: 35%;
+    }
+}
+
+#check:checked~#menu {
+    animation-name: menu;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+    align-items: flex-start;
+}
+
+#check_two, #check {
+    display: none;
+}
+
+@keyframes btt_menuFrame {
+    from {
+        font-size: 3.5rem
+    }
+
+    to {
+        font-size: 5rem
+    }
+}
+
+.btt_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    font-size: 3.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+
+.btt_menu:hover {
+    animation-name: btt_menuFrame;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.btt_menu:active {
+    color: #dc701a;
+}
+
+#menu img {
+    margin: 0;
+    width: 3rem;
+}
+
+@keyframes btt_menuFrame2 {
+    from {
+        font-size: 3.5rem; background-color: #f89e19
+    }
+
+    to {
+        font-size: 4rem; background-color: #dc701a
+    }
+}
+
+#check:checked~#menu .btt_menu {
+    justify-content: space-between;
+    font-size: 3.5rem;
+}
+
+#check:checked~#menu .btt_menu:hover {
+    animation-name: btt_menuFrame2;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+#check:checked~#menu .btt_menu:active {
+    background-color: white;
+}
+
+#menu p {
+    display: none;
+    color: white;
+    font-family: 'Silkscreen', cursive;
+}
+
+#check:checked~#menu .btt_menu p {
+    display: flex;
+}
+
+#check:checked~#menu .btt_menu .menu_btt_2 {
+    position: relative;
+    left: 3.5rem;
+}
+
+
+@keyframes input_frame {
+    from {
+        width: 350px;
+        height: 70px;
+        border: 15px #f89e19 solid;
+        border-radius: 80px;
+        font-size: 3rem
+    }
+
+    to {
+        width: 400px;
+        height: 80px;
+        border: 20px #dc701a solid;
+        border-radius: 85px;
+        font-size: 4rem
+    }
+}
+
+.input_value {
+    width: 350px;
+    height: 70px;
+    border: 15px #f89e19 solid;
+    border-radius: 80px;
+
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.input_value:hover {
+    animation-name: input_frame;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+.input_value:focus {
+    animation-name: input_frame;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    outline: 9px solid white;
+}
+
+#valor2 {
+    order: 1;
+}
+
+#valor3 {
+    order: 2;
+}
+
+#valor {
+    order: 3;
+}
+
+#check_two:checked~#valor2 {
+    order: 3;
+}
+
+#check_two:checked~#valor {
+    order: 1;
+}
+
+@media screen and (max-width:1440px){
+
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+    /* 'Bangers', cursive */
+    @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+    /* 'Silkscreen', cursive; */
+
+    html {
+        font-size: 10px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+    }
+
+    #principal {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    #up {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: #f89e19;
+        height: 12%;
+    }
+
+    #up h1 {
+        margin: 0;
+        font-family: 'Silkscreen', cursive;
+        font-size: 4rem;
+        color: white;
+    }
+
+    #logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btc {
+        margin: 0;
+        width: 7rem;
+        height: 7rem;
+    }
+
+    #menu_btt {
+        margin-left: 2%;
+    }
+
+    .menu_btn {
+        cursor: pointer;
+        font-size: 5rem;
+        color: white;
+        transition: 0.2s ease;
+        transition-property: font-size;
+    }
+
+    .menu_btn:hover {
+        font-size: 6rem;
+    }
+
+    .menu_btn:active {
+        color: #dc701a;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        grid-row-gap: 10rem;
+        background-color: #191919;
+        height: 88%;
+    }
+
+    #conversor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: flex-start;
+
+        color: white;
+        font-family: 'Silkscreen', cursive;
+    }
+
+    .text img {
+        margin: 0;
+        padding: 0;
+        width: 5rem;
+    }
+
+    .text p {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        grid-column-gap: 2rem;
+
+        margin: 0;
+        padding: 0;
+        font-size: 4rem;
+        color: #f89e19;
+    }
+
+    .text h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 12rem;
+    }
+
+    #check:checked~#conversor h1{
+        font-size: 8rem;
+    }
+
+    #check:checked~#conversor p{
+        font-size: 2rem;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        background-color: #f89e19;
+        width: 7%;
+        height: 100%;
+    }
+
+    @keyframes menu {
+        from {
+            width: 7%;
+        }
+
+        to {
+            width: 35%;
+        }
+    }
+
+    #check:checked~#menu {
+        animation-name: menu;
+        animation-duration: 0.4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+
+        align-items: flex-start;
+    }
+
+    #check_two {
+        display: none;
+    }
+
+    @keyframes btt_menuFrame {
+        from {
+            font-size: 3rem
+        }
+
+        to {
+            font-size: 4rem
+        }
+    }
+
+    @keyframes btt_menuFrame2 {
+        from {
+            font-size: 2.5rem; background-color: #f89e19;
+        }
+
+        to {
+            font-size: 3.5rem; background-color: #dc701a;
+        }
+    }
+
+    .btt_menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        font-size: 3rem;
+        cursor: pointer;
+        color: white;
+    }
+
+    .btt_menu:hover {
+        animation-name: btt_menuFrame;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .btt_menu:active {
+        color: #dc701a;
+    }
+
+    #menu img {
+        margin: 0;
+        width: 3rem;
+    }
+
+    #check:checked~#menu .btt_menu {
+        justify-content: space-between;
+        font-size: 2.5rem;
+    }
+
+    #check:checked~#menu .btt_menu:hover {
+        animation-name: btt_menuFrame2;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    #check:checked~#menu .btt_menu:active {
+        background-color: white;
+    }
+
+    #menu p {
+        display: none;
+        color: white;
+        font-family: 'Silkscreen', cursive;
+    }
+
+    #check:checked~#menu .btt_menu p {
+        display: flex;
+    }
+
+    #check:checked~#menu .btt_menu .menu_btt_2 {
+        position: relative;
+        left: 3.5rem;
+    }
+
+
+    @keyframes input_frame {
+        from {
+            width: 350px;
+            height: 70px;
+            border: 15px #f89e19 solid;
+            border-radius: 80px;
+            font-size: 3rem
+        }
+
+        to {
+            width: 400px;
+            height: 80px;
+            border: 20px #dc701a solid;
+            border-radius: 85px;
+            font-size: 4rem
+        }
+    }
+
+    .input_value {
+        width: 350px;
+        height: 70px;
+        border: 15px #f89e19 solid;
+        border-radius: 80px;
+
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .input_value:hover {
+        animation-name: input_frame;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+
+    }
+
+    .input_value:focus {
+        animation-name: input_frame;
+        animation-duration: 0.7s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        outline: 9px solid white;
+    }
+
+    #valor2 {
+        order: 1;
+    }
+
+    #valor3 {
+        order: 2;
+    }
+
+    #valor {
+        order: 3;
+    }
+
+    #check_two:checked~#valor2 {
+        order: 3;
+    }
+
+    #check_two:checked~#valor {
+        order: 1;
+    }
+
+}
+@media screen and (max-width:1024px){
+
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+    /* 'Bangers', cursive */
+    @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+    /* 'Silkscreen', cursive; */
+
+    html {
+        font-size: 10px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+    }
+
+    #principal {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    #up {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: #f89e19;
+        height: 10%;
+    }
+
+    #up h1 {
+        margin: 0;
+        font-family: 'Silkscreen', cursive;
+        font-size: 4rem;
+        color: white;
+    }
+
+    #logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btc {
+        margin: 0;
+        width: 7rem;
+        height: 7rem;
+    }
+
+    #menu_btt {
+        margin-left: 2.8%;
+    }
+
+    .menu_btn {
+        cursor: pointer;
+        font-size: 5rem;
+        color: white;
+        transition: 0.5s ease;
+        transition-property: font-size;
+    }
+
+    .menu_btn:hover {
+        font-size: 6rem;
+    }
+
+    .menu_btn:active {
+        color: #dc701a;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        grid-row-gap: 10rem;
+        background-color: #191919;
+        height: 90%;
+    }
+
+    #conversor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: flex-start;
+
+        color: white;
+        font-family: 'Silkscreen', cursive;
+    }
+
+    .text img {
+        margin: 0;
+        padding: 0;
+        width: 5rem;
+    }
+
+    .text p {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        grid-column-gap: 1rem;
+
+        margin: 0;
+        padding: 0;
+        font-size: 3rem;
+        color: #f89e19;
+    }
+
+    .text h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 9rem;
+    }
+
+    #check:checked~#conversor h1{
+        font-size: 5rem;
+    }
+
+    #check:checked~#conversor p{
+        font-size: 2rem;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        background-color: #f89e19;
+        width: 10%;
+        height: 100%;
+    }
+
+    @keyframes menu {
+        from {
+            width: 10%;
+        }
+
+        to {
+            width: 40%;
+        }
+    }
+
+    #check:checked~#menu {
+        animation-name: menu;
+        animation-duration: 0.4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+
+        align-items: flex-start;
+    }
+
+    #check_two, #check {
+        display: none;
+    }
+
+    @keyframes btt_menuFrame {
+        from {
+            font-size: 3rem
+        }
+
+        to {
+            font-size: 4rem
+        }
+    }
+
+    @keyframes btt_menuFrame2 {
+        from {
+            font-size: 2.1rem; background-color: #f89e19;
+        }
+
+        to {
+            font-size: 3.5rem; background-color: #dc701a;
+        }
+    }
+
+    .btt_menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        font-size: 3rem;
+        cursor: pointer;
+        color: white;
+    }
+
+    .btt_menu:hover {
+        animation-name: btt_menuFrame;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .btt_menu:active {
+        color: #dc701a;
+    }
+
+    #menu img {
+        margin: 0;
+        width: 3rem;
+    }
+
+    #check:checked~#menu .btt_menu {
+        justify-content: space-between;
+        font-size: 2.1rem;
+    }
+
+    #check:checked~#menu .btt_menu:hover {
+        animation-name: btt_menuFrame2;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    #check:checked~#menu .btt_menu:active {
+        background-color: white;
+    }
+
+    #menu p {
+        display: none;
+        color: white;
+        font-family: 'Silkscreen', cursive;
+    }
+
+    #check:checked~#menu .btt_menu p {
+        display: flex;
+    }
+
+    #check:checked~#menu .btt_menu .menu_btt_2 {
+        position: relative;
+        left: 3.5rem;
+    }
+
+
+    @keyframes input_frame {
+        from {
+            width: 350px;
+            height: 70px;
+            border: 15px #f89e19 solid;
+            border-radius: 80px;
+            font-size: 3rem
+        }
+
+        to {
+            width: 400px;
+            height: 80px;
+            border: 20px #dc701a solid;
+            border-radius: 85px;
+            font-size: 4rem
+        }
+    }
+
+    .input_value {
+        width: 350px;
+        height: 70px;
+        border: 15px #f89e19 solid;
+        border-radius: 80px;
+
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .input_value:hover {
+        animation-name: input_frame;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+
+    }
+
+    .input_value:focus {
+        animation-name: input_frame;
+        animation-duration: 0.7s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        outline: 9px solid white;
+    }
+
+    #valor2 {
+        order: 1;
+    }
+
+    #valor3 {
+        order: 2;
+    }
+
+    #valor {
+        order: 3;
+    }
+
+    #check_two:checked~#valor2 {
+        order: 3;
+    }
+
+    #check_two:checked~#valor {
+        order: 1;
+    }
+
+}
+@media screen and (max-width:768px){
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+    /* 'Bangers', cursive */
+    @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+    /* 'Silkscreen', cursive; */
+
+    html {
+        font-size: 10px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+    }
+
+    #principal {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    #up {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: #f89e19;
+        height: 10%;
+    }
+
+    #up h1 {
+        margin: 0;
+        font-family: 'Silkscreen', cursive;
+        font-size: 4rem;
+        color: white;
+    }
+
+    #logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btc {
+        margin: 0;
+        width: 7rem;
+        height: 7rem;
+    }
+
+    #menu_btt {
+        margin-left: 1.8%;
+    }
+
+    .menu_btn {
+        cursor: pointer;
+        font-size: 4rem;
+        color: white;
+        transition: 0.5s ease;
+        transition-property: font-size;
+    }
+
+    .menu_btn:hover {
+        font-size: 5rem;
+    }
+
+    .menu_btn:active {
+        color: #dc701a;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        grid-row-gap: 10rem;
+        background-color: #191919;
+        height: 90%;
+    }
+
+    #conversor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: flex-start;
+
+        color: white;
+        font-family: 'Silkscreen', cursive;
+    }
+
+    .text img {
+        margin: 0;
+        padding: 0;
+        width: 5rem;
+    }
+
+    .text p {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        grid-column-gap: 1rem;
+
+        margin: 0;
+        padding: 0;
+        font-size: 2.5rem;
+        color: #f89e19;
+    }
+
+    .text h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 7rem;
+    }
+
+    #check:checked~#conversor h1{
+        font-size: 4rem;
+    }
+
+    #check:checked~#conversor p{
+        font-size: 2rem;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        background-color: #f89e19;
+        width: 10%;
+        height: 100%;
+    }
+
+    @keyframes menu {
+        from {
+            width: 10%;
+        }
+
+        to {
+            width: 45%;
+        }
+    }
+
+    #check:checked~#menu {
+        animation-name: menu;
+        animation-duration: 0.4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+
+        align-items: flex-start;
+    }
+
+    #check_two, #check {
+        display: none;
+    }
+
+    @keyframes btt_menuFrame {
+        from {
+            font-size: 3rem
+        }
+
+        to {
+            font-size: 4rem
+        }
+    }
+
+    @keyframes btt_menuFrame2 {
+        from {
+            font-size: 2rem; background-color: #f89e19;
+        }
+
+        to {
+            font-size: 3.5rem; background-color: #dc701a;
+        }
+    }
+
+    .btt_menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        font-size: 3rem;
+        cursor: pointer;
+        color: white;
+    }
+
+    .btt_menu:hover {
+        animation-name: btt_menuFrame;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .btt_menu:active {
+        color: #dc701a;
+    }
+
+    #menu img {
+        margin: 0;
+        width: 3rem;
+    }
+
+    #check:checked~#menu .btt_menu {
+        justify-content: space-between;
+        font-size: 2rem;
+    }
+
+    #check:checked~#menu .btt_menu:hover {
+        animation-name: btt_menuFrame2;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    #check:checked~#menu .btt_menu:active {
+        background-color: white;
+    }
+
+    #menu p {
+        display: none;
+        color: white;
+        font-family: 'Silkscreen', cursive;
+    }
+
+    #check:checked~#menu .btt_menu p {
+        display: flex;
+    }
+
+    #check:checked~#menu .btt_menu .menu_btt_2 {
+        position: relative;
+        left: 2rem;
+    }
+
+
+    @keyframes input_frame {
+        from {
+            width: 350px;
+            height: 70px;
+            border: 15px #f89e19 solid;
+            border-radius: 80px;
+            font-size: 3rem
+        }
+
+        to {
+            width: 400px;
+            height: 80px;
+            border: 20px #dc701a solid;
+            border-radius: 85px;
+            font-size: 4rem
+        }
+    }
+
+    .input_value {
+        width: 350px;
+        height: 70px;
+        border: 15px #f89e19 solid;
+        border-radius: 80px;
+
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .input_value:hover {
+        animation-name: input_frame;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+
+    }
+
+    .input_value:focus {
+        animation-name: input_frame;
+        animation-duration: 0.7s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        outline: 9px solid white;
+    }
+
+    #valor2 {
+        order: 1;
+    }
+
+    #valor3 {
+        order: 2;
+    }
+
+    #valor {
+        order: 3;
+    }
+
+    #check_two:checked~#valor2 {
+        order: 3;
+    }
+
+    #check_two:checked~#valor {
+        order: 1;
+    }
+}
+@media screen and (max-width:550px){
+
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+    /* 'Bangers', cursive */
+    @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+    /* 'Silkscreen', cursive; */
+
+    html {
+        font-size: 10px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+    }
+
+    #principal {
+        display: flex;
+        flex-direction: column;
+        height: 100vh; 
+    }
+
+    #up {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: #f89e19;
+        height: 10%;
+    }
+
+    #up h1 {
+        margin: 0;
+        font-family: 'Silkscreen', cursive;
+        font-size: 2rem;
+        color: white;
+    }
+
+    #logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btc {
+        margin: 0;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    #menu_btt {
+        margin-left: 3%;
+    }
+
+    .menu_btn {
+        cursor: pointer;
+        font-size: 4rem;
+        color: white;
+        transition: 0.5s ease;
+        transition-property: font-size;
+    }
+
+    .menu_btn:hover {
+        font-size: 5rem;
+    }
+
+    .menu_btn:active {
+        color: #dc701a;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        grid-row-gap: 10rem;
+        background-color: #191919;
+        height: 90%;
+    }
+
+    #conversor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: flex-start;
+
+        color: white;
+        font-family: 'Silkscreen', cursive;
+    }
+
+    .text img {
+        margin: 0;
+        padding: 0;
+        width: 5rem;
+    }
+
+    .text p {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        grid-column-gap: 1rem;
+
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+        color: #f89e19;
+    }
+
+    .text h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 3rem;
+    }
+
+    #check:checked~#conversor h1{
+        display: none;
+    }
+
+    #check:checked~#conversor p{
+        display: none;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        background-color: #f89e19;
+        width: 15%;
+        height: 100%;
+    }
+
+    @keyframes menu {
+        from {
+            width: 15%;
+        }
+
+        to {
+            width: 90%;
+        }
+    }
+
+    #check:checked~#menu {
+        animation-name: menu;
+        animation-duration: 0.4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+
+        align-items: flex-start;
+    }
+
+    #check_two, #check {
+        display: none;
+    }
+
+    @keyframes btt_menuFrame {
+        from {
+            font-size: 3rem
+        }
+
+        to {
+            font-size: 4rem
+        }
+    }
+
+    @keyframes btt_menuFrame2 {
+        from {
+            font-size: 2rem; background-color: #f89e19;
+        }
+
+        to {
+            font-size: 3.5rem; background-color: #dc701a;
+        }
+    }
+
+    .btt_menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        font-size: 3rem;
+        cursor: pointer;
+        color: white;
+    }
+
+    .btt_menu:hover {
+        animation-name: btt_menuFrame;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .btt_menu:active {
+        color: #dc701a;
+    }
+
+    #menu img {
+        margin: 0;
+        width: 3rem;
+    }
+
+    #check:checked~#menu .btt_menu {
+        justify-content: space-between;
+        font-size: 2rem;
+    }
+
+    #check:checked~#menu .btt_menu:hover {
+        animation-name: btt_menuFrame2;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    #menu p {
+        display: none;
+        color: white;
+        font-family: 'Silkscreen', cursive;
+    }
+
+    #check:checked~#menu .btt_menu p {
+        display: flex;
+    }
+
+    #check:checked~#menu .btt_menu .menu_btt_2 {
+        position: relative;
+        left: 1.5rem;
+    }
+
+
+    @keyframes input_frame {
+        from {
+            width: 350px;
+            height: 70px;
+            border: 15px #f89e19 solid;
+            border-radius: 80px;
+            font-size: 3rem
+        }
+
+        to {
+            width: 400px;
+            height: 80px;
+            border: 20px #dc701a solid;
+            border-radius: 85px;
+            font-size: 4rem
+        }
+    }
+
+    .input_value {
+        width: 350px;
+        height: 70px;
+        border: 15px #f89e19 solid;
+        border-radius: 80px;
+
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .input_value:hover {
+        animation-name: input_frame;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+
+    }
+
+    .input_value:focus {
+        animation-name: input_frame;
+        animation-duration: 0.7s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        outline: 9px solid white;
+    }
+
+    #valor2 {
+        order: 1;
+    }
+
+    #valor3 {
+        order: 2;
+    }
+
+    #valor {
+        order: 3;
+    }
+
+    #check_two:checked~#valor2 {
+        order: 3;
+    }
+
+    #check_two:checked~#valor {
+        order: 1;
+    }
+}
